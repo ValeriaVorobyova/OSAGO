@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.osago.RegistrationDriverController">
+    <children>
+        <Label layoutX="372.0" layoutY="27.0" prefHeight="44.0" prefWidth="453.0" text="ОСАГО" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Times New Roman" size="47.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutY="97.0" prefHeight="603.0" prefWidth="900.0" style="-fx-background-color: #FAFAFA;">
+            <children>
+                <TextField fx:id="lastNameField" layoutX="437.0" layoutY="77.0" prefHeight="25.0" prefWidth="401.0" promptText="Фамилия" />
+                <TextField fx:id="firstNameField" layoutX="437.0" layoutY="129.0" prefHeight="25.0" prefWidth="401.0" promptText="Имя" />
+                <TextField fx:id="patronymicField" layoutX="437.0" layoutY="181.0" prefHeight="25.0" prefWidth="401.0" promptText="Отчество" />
+                <Label layoutX="259.0" layoutY="14.0" prefHeight="25.0" prefWidth="335.0" text="Введите данные о водителе">
+                    <font>
+                        <Font name="Times New Roman" size="22.0" />
+                    </font>
+                </Label>
+                <Label layoutX="44.0" layoutY="77.0" prefHeight="24.0" prefWidth="281.0" text="Фамилия">
+                    <font>
+                        <Font name="Times New Roman" size="22.0" />
+                    </font>
+                </Label>
+                <Label layoutX="44.0" layoutY="129.0" prefHeight="24.0" prefWidth="281.0" text="Имя">
+                    <font>
+                        <Font name="Times New Roman" size="22.0" />
+                    </font>
+                </Label>
+                <Label layoutX="44.0" layoutY="181.0" prefHeight="24.0" prefWidth="281.0" text="Отчество">
+                    <font>
+                        <Font name="Times New Roman" size="22.0" />
+                    </font>
+                </Label>
+                <Label layoutX="44.0" layoutY="238.0" prefHeight="24.0" prefWidth="281.0" text="Дата рождения">
+                    <font>
+                        <Font name="Times New Roman" size="22.0" />
+                    </font>
+                </Label>
+                <Label layoutX="44.0" layoutY="295.0" prefHeight="24.0" prefWidth="281.0" text="Серия и номер паспорта">
+                    <font>
+                        <Font name="Times New Roman" size="22.0" />
+                    </font>
+                </Label>
+                <Label layoutX="44.0" layoutY="345.0" prefHeight="24.0" prefWidth="281.0" text="Дата выдачи паспорта">
+                    <font>
+                        <Font name="Times New Roman" size="22.0" />
+                    </font>
+                </Label>
+                <Label layoutX="44.0" layoutY="396.0" prefHeight="25.0" prefWidth="413.0" text="Номер водительского удостоверения">
+                    <font>
+                        <Font name="Times New Roman" size="22.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="passportField" layoutX="437.0" layoutY="295.0" prefHeight="25.0" prefWidth="401.0" promptText="Серия и номер" />
+                <TextField fx:id="identifyCardField" layoutX="443.0" layoutY="396.0" prefHeight="25.0" prefWidth="401.0" promptText="Номер удостоверения" />
+                <Button fx:id="backInDriver" layoutX="489.0" layoutY="541.0" mnemonicParsing="false" onAction="#switchToSceneRegistrationCar" prefHeight="25.0" prefWidth="109.0" text="Вернуться">
+                    <font>
+                        <Font name="Times New Roman" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="nextInDriver" layoutX="740.0" layoutY="541.0" mnemonicParsing="false" onAction="#switchToSceneAboutInsurer" prefHeight="25.0" prefWidth="109.0" text="Продолжить">
+                    <font>
+                        <Font name="Times New Roman" size="12.0" />
+                    </font>
+                </Button>
+            <DatePicker fx:id="birthDateField" layoutX="439.0" layoutY="239.0" prefHeight="25.0" prefWidth="401.0" promptText="Дата рождения" />
+            <DatePicker fx:id="dateOfPassportField" layoutX="440.0" layoutY="345.0" prefHeight="25.0" prefWidth="401.0" promptText="Дата выдачи паспорта" />
+            <Button fx:id="saveDriverButton" layoutX="613.0" layoutY="541.0" mnemonicParsing="false" onAction="#signUpNewDriver" prefHeight="25.0" prefWidth="109.0" text="Сохранить">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font></Button>
+            <ChoiceBox fx:id="experienceField" layoutX="442.0" layoutY="442.0" prefHeight="25.0" prefWidth="401.0" />
+            <Label layoutX="44.0" layoutY="442.0" prefHeight="24.0" prefWidth="281.0" text="Стаж вождения">
+               <font>
+                  <Font name="Times New Roman" size="22.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="driverRatingField" layoutX="443.0" layoutY="488.0" prefHeight="25.0" prefWidth="401.0" />
+            <Label layoutX="44.0" layoutY="488.0" prefHeight="25.0" prefWidth="321.0" text="Класс вождения за прошлый год">
+               <font>
+                  <Font name="Times New Roman" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="checkL" layoutX="41.0" layoutY="541.0" prefHeight="25.0" prefWidth="420.0" textFill="#1e0248">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

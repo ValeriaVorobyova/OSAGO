@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.osago.GetInsurancePolicyController">
+    <children>
+        <Label layoutX="372.0" layoutY="27.0" prefHeight="44.0" prefWidth="453.0" text="ОСАГО" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Times New Roman" size="47.0" />
+            </font>
+        </Label>
+        <AnchorPane fx:id="" layoutY="96.0" prefHeight="603.0" prefWidth="900.0" style="-fx-background-color: #FAFAFA;">
+            <children>
+                <Label layoutX="342.0" layoutY="1.0" prefHeight="25.0" prefWidth="335.0" text="СТРАХОВОЙ ПОЛИС">
+                    <font>
+                        <Font name="Times New Roman" size="22.0" />
+                    </font>
+                </Label>
+                <Label layoutX="37.0" layoutY="100.0" prefHeight="24.0" prefWidth="157.0" text="ФИО страхователя:">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="ratiosTable" layoutX="43.0" layoutY="436.0" prefHeight="68.0" prefWidth="829.0">
+                    <columns>
+                        <TableColumn fx:id="baseRateT" prefWidth="108.00003433227539" text="ТБ" />
+                        <TableColumn fx:id="safeDriveRatioT" prefWidth="103.3333740234375" text="КБМ" />
+                        <TableColumn fx:id="experienceRatioT" prefWidth="99.33329772949219" text="КВС" />
+                        <TableColumn fx:id="regionRatioT" prefWidth="106.66668701171875" text="КТ" />
+                        <TableColumn fx:id="powerRatioT" prefWidth="108.00003051757812" text="КМ" />
+                        <TableColumn fx:id="countDriversRatioT" prefWidth="97.99993896484375" text="КО" />
+                        <TableColumn fx:id="periodRatio" prefWidth="104.0" text="КС" />
+                        <TableColumn fx:id="totalPrice" prefWidth="110.666748046875" text="Итого" />
+                    </columns>
+                </TableView>
+                <TableView fx:id="driversTable" layoutX="43.0" layoutY="302.0" prefHeight="103.0" prefWidth="829.0">
+                    <columns>
+                        <TableColumn fx:id="lastNameT" prefWidth="207.33334732055664" text="Фамилия" />
+                        <TableColumn fx:id="firstNameT" prefWidth="205.3332977294922" text="Имя" />
+                        <TableColumn fx:id="patronymicT" prefWidth="221.33340454101562" text="Отчество" />
+                        <TableColumn fx:id="cardNumberT" minWidth="0.0" prefWidth="196.0" text="Водительское удостоверение" />
+                    </columns>
+                </TableView>
+                <Label layoutX="37.0" layoutY="172.0" prefHeight="24.0" prefWidth="281.0" text="Транспортное средство:">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="43.0" layoutY="265.0" prefHeight="25.0" prefWidth="321.0" text="Договор заключен в отношении:">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="43.0" layoutY="405.0" prefHeight="25.0" prefWidth="485.0" text="Расчет размера страховой премии:">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="534.0" layoutY="67.0" prefHeight="25.0" prefWidth="227.0" text="Дата заключения договора: ">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="37.0" layoutY="71.0" prefHeight="24.0" prefWidth="205.0" text="Номер страхового полиса:">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lastNameField" layoutX="199.0" layoutY="103.0" prefHeight="24.0" prefWidth="118.0">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="firstNameField" layoutX="199.0" layoutY="124.0" prefHeight="24.0" prefWidth="258.0">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="patronymicField" layoutX="199.0" layoutY="148.0" prefHeight="24.0" prefWidth="258.0">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="carBrandField" layoutX="298.0" layoutY="172.0" prefHeight="24.0" prefWidth="281.0">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="carModelField" layoutX="298.0" layoutY="196.0" prefHeight="24.0" prefWidth="281.0">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="carYearField" layoutX="298.0" layoutY="220.0" prefHeight="24.0" prefWidth="101.0">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="carNumberField" layoutX="298.0" layoutY="244.0" prefHeight="24.0" prefWidth="274.0">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="policyNumberField" layoutX="242.0" layoutY="71.0" prefHeight="24.0" prefWidth="62.0">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="driverCountField" layoutX="297.0" layoutY="265.0" prefHeight="25.0" prefWidth="572.0">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="534.0" layoutY="99.0" prefHeight="25.0" prefWidth="227.0" text="Срок заключения договора:">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="toDateField" layoutX="752.0" layoutY="103.0" prefHeight="24.0" prefWidth="87.0">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></Label>
+                <Button layoutX="388.0" layoutY="543.0" mnemonicParsing="false" onAction="#switchToSceneHomepage" prefHeight="25.0" prefWidth="101.0" text="На главную">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font></Button>
+                <Label fx:id="carBrandField1" layoutX="232.0" layoutY="172.0" prefHeight="24.0" prefWidth="52.0" text="марка:">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="carModelField1" layoutX="231.0" layoutY="196.0" prefHeight="24.0" prefWidth="62.0" text="модель:">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="carYearField1" layoutX="230.0" layoutY="220.0" prefHeight="24.0" prefWidth="35.0" text="год:">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="carNumberField1" layoutX="231.0" layoutY="244.0" prefHeight="24.0" prefWidth="62.0" text="номер:">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="fromDateField" layoutX="752.0" layoutY="71.0" prefHeight="24.0" prefWidth="87.0">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></Label>
+            <Label layoutX="37.0" layoutY="43.0" prefHeight="24.0" prefWidth="205.0" text="Введите номер авто:">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="carNumberForSearch" layoutX="205.0" layoutY="43.0" prefHeight="25.0" prefWidth="118.0" />
+            <Button fx:id="searchButton" layoutX="339.0" layoutY="43.0" mnemonicParsing="false" onAction="#initialization" prefHeight="25.0" prefWidth="87.0" text="Поиск">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font></Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
